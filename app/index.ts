@@ -1,5 +1,10 @@
-export const app = async () => {};
+import { config } from './config';
+import { logger } from './utils/logger';
 
-export default {
-  app
+export const app = async () => {
+  logger.info('test');
+  logger.info('winston logger test');
+  logger.debug('config', config);
 };
+
+export default app;
